@@ -1,20 +1,34 @@
 {
   "name": "fixbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "fixbot api endpoint",
   "main": "app.js",
-  "scripts": {
-    "start": "nodemon app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.11.10"
+    "cors": "^2.8.5",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tetranyble/fixbot.git"
+  },
+  "keywords": [
+    "fixbot",
+    "api",
+    "leonard"
+  ],
+  "author": "Ekenekiso Leonard Ugbanawaji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tetranyble/fixbot/issues"
+  },
+  "homepage": "https://github.com/Tetranyble/fixbot#readme"
 }

@@ -14,8 +14,8 @@ const create = asyncWrapper(async (req, res) => {
 })
 
 const show = asyncWrapper(async (req, res, next) => {
-  const { id: telemetric } = req.params
-  const telemetric = await Telemetric.findOne({ _id: telemetric })
+  const { id: param } = req.params
+  const telemetric = await Telemetric.findOne({ _id: param })
   if (!telemetric) {
     return next(createCustomError(`No telemetric with id : ${telemetric}`, 404))
   }
@@ -25,9 +25,9 @@ const show = asyncWrapper(async (req, res, next) => {
 
 
 const update = asyncWrapper(async (req, res, next) => {
-  const { id: telemetric } = req.params
+  const { id: tele } = req.params
 
-  const telemetric = await Telemetric.findOneAndUpdate({ _id: telemetric }, req.body, {
+  const telemetric = await Telemetric.findOneAndUpdate({ _id: tele }, req.body, {
     new: true,
     runValidators: true,
   })
@@ -40,8 +40,8 @@ const update = asyncWrapper(async (req, res, next) => {
 })
 
 const destroy = asyncWrapper(async (req, res, next) => {
-  const { id: telemetric } = req.params
-  const telemetric = await Telemetric.findOneAndDelete({ _id: telemetric })
+  const { id: tele } = req.params
+  const telemetric = await Telemetric.findOneAndDelete({ _id: tele })
   if (!telemetric) {
     return next(createCustomError(`No telemetric with id : ${telemetric}`, 404))
   }
